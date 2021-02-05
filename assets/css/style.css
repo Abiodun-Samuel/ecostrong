@@ -613,7 +613,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .more-services .card:hover .card-body {
   background: #805229;
-  
 }
 
 .more-services .card:hover .read-more a,
@@ -821,24 +820,21 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #testimonials .testimonial-item {
   box-sizing: content-box;
-  padding: 30px 30px 0 30px;
+  /* padding: 30px 30px 0 30px; */
   margin: 30px 15px;
   text-align: center;
-  min-height: 350px;
+  /* min-height: 350px; */
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
 }
 
-@media (max-width: 767px) {
-  #testimonials .testimonial-item {
-    margin: 30px 10px;
-  }
-}
+
 
 #testimonials .testimonial-item .testimonial-img {
-  width: 90px;
+  max-width: 70%;
+  /*
   border-radius: 50%;
   border: 4px solid #fff;
-  margin: 0 auto;
+  margin: 0 auto; */
 }
 
 #testimonials .testimonial-item h3 {
@@ -938,58 +934,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: 3px solid #50d8af;
 }
 
-/* Our Team Section
---------------------------------*/
-#team {
-  background: #fff;
-  padding: 30px 0 0 0;
+/* ========== Our Team Section ========== */
+@media (max-width: 768px) {
+  #team .card {
+    max-width: 30%;
+  }
 }
-
-#team .member {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#team .member .pic {
-  overflow: hidden;
-  text-align: center;
-}
-
-#team .member .pic img {
-  max-width: 100%;
-}
-
-#team .member .details {
-  background: #50d8af;
-  color: #fff;
-  padding: 15px;
-  border-radius: 0 0 3px 3px;
-}
-
-#team .member h4 {
-  font-weight: 700;
-  margin-bottom: 2px;
-  font-size: 18px;
-}
-
-#team .member span {
-  font-style: italic;
-  display: block;
-  font-size: 13px;
-}
-
-#team .member .social {
-  margin-top: 5px;
-}
-
-#team .member .social a {
-  color: #fff;
-}
-
-#team .member .social i {
-  font-size: 16px;
-  margin: 0 2px;
-}
+/* ========== Our Team Section ========== */
 
 /* Contact Section
 --------------------------------*/

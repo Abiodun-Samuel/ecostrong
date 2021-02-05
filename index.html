@@ -18,8 +18,11 @@
       rel="stylesheet"
     />
 
-    <!-- Vendor CSS Files -->
-    <!-- Vendor CSS Files -->
+    <!-- ========== Vendor CSS Files ========== -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link
       href="assets/vendor/bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
@@ -43,7 +46,7 @@
 
   <body>
     <!-- ======= Top Bar ======= -->
-    <section id="topbar" class="d-none d-lg-block">
+    <div id="topbar" class="d-none d-lg-block">
       <div class="container clearfix">
         <div class="contact-info float-left">
           <i class="fa fa-envelope-o"></i>
@@ -58,7 +61,7 @@
           <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
         </div>
       </div>
-    </section>
+    </div>
     <!-- End Top Bar-->
 
     <!-- ======= Header ======= -->
@@ -140,9 +143,18 @@
               </p>
               <ul>
                 <li>
-                  <i> <svg  width="1.5em" height="1.5em" viewBox="0 0 16 16"><g fill="#805229"><path fill-rule="evenodd" d="M8.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14l.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486l-.943 1.179z"/></g></svg></i> At Ecostrong Company
-                  Limited, we constantly strive to create the best outcomes for
-                  our clients, customers, partners and communities.
+                  <i>
+                    <svg width="1.5em" height="1.5em" viewBox="0 0 16 16">
+                      <g fill="#805229">
+                        <path
+                          fill-rule="evenodd"
+                          d="M8.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14l.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486l-.943 1.179z"
+                        />
+                      </g></svg
+                  ></i>
+                  At Ecostrong Company Limited, we constantly strive to create
+                  the best outcomes for our clients, customers, partners and
+                  communities.
                 </li>
                 <li>
                   <i class="ri-check-double-line"></i> Ecostrong vision is to
@@ -188,7 +200,9 @@
             <div class="col-md-6 d-flex align-items-stretch">
               <div
                 class="card"
-                style="background-image: url('assets/img/ecopix/Ecostrong\ Forex.jpg')"
+                style="
+                  background-image: url('assets/img/ecopix/Ecostrong\ Forex.jpg');
+                "
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
@@ -571,41 +585,33 @@
       <!-- End Portfolio Section -->
 
       <!-- ======= Testimonials Section ======= -->
-      <!-- <section id="testimonials">
+      <section id="testimonials">
         <div class="container">
           <div class="section-header">
             <h2>Testimonials</h2>
-            <p>
-              Sed tamen tempor magna labore dolore dolor sint tempor duis magna
-              elit veniam aliqua esse amet veniam enim export quid quid veniam
-              aliqua eram noster malis nulla duis fugiat culpa esse aute nulla
-              ipsum velit export irure minim illum fore
-            </p>
+            <p>Meet our amazing staffs</p>
           </div>
           <div class="owl-carousel testimonials-carousel">
             <div class="testimonial-item">
-              <p>
+              <div class="card" style="width: 18rem">
                 <img
-                  src="assets/img/quote-sign-left.png"
-                  class="quote-sign-left"
-                  alt=""
+                  src="assets/img/teams/team1.jpg"
+                  class="card-img-top"
+                  alt="..."
                 />
-                Proin iaculis purus consequat sem cure digni ssim donec
-                porttitora entum suscipit rhoncus. Accusantium quam, ultricies
-                eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                <img
-                  src="assets/img/quote-sign-right.png"
-                  class="quote-sign-right"
-                  alt=""
-                />
-              </p>
-              <img
-                src="assets/img/testimonial-1.jpg"
-                class="testimonial-img"
-                alt=""
-              />
-              <h3>Saul Goodman</h3>
-              <h4>Ceo &amp; Founder</h4>
+                <div class="card-body">
+                  <div class="card-text">
+                    <h4>Sunny segz</h4>
+                    <span>Chief Executive Officer</span>
+                    <div class="social">
+                      <a href=""><i class="fa fa-twitter"></i></a>
+                      <a href=""><i class="fa fa-facebook"></i></a>
+                      <a href=""><i class="fa fa-google-plus"></i></a>
+                      <a href=""><i class="fa fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="testimonial-item">
@@ -711,8 +717,9 @@
             </div>
           </div>
         </div>
-      </section> -->
-      <!-- End Testimonials Section -->
+      </section>
+      -->
+      <!-- End Testimonials Section
 
       <!-- ======= Call To Action Section ======= -->
       <section id="call-to-action" class="wow fadeInUp">
@@ -738,92 +745,249 @@
       <!-- ======= Team Section ======= -->
       <section id="team" class="wow fadeInUp">
         <div class="container">
-          <div class="section-header">
+          <div class="section-title" data-aos="fade-up">
             <h2>Our Team</h2>
           </div>
           <div class="row">
-            <div class="col-lg-3 col-md-6">
-              <div class="member">
-                <div class="pic">
-                  <img
-                    src="assets/img/ecopix/EcoStrong Investment Logo.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="details">
-                  <h4>Sunny segz</h4>
-                  <span>Chief Executive Officer</span>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
+            <!-- Slider main container -->
+            <div class="swiper-container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="">
+                    <div class="card" style="width: 18rem">
+                      <img
+                        src="assets/img/teams/team1.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <div class="card-text">
+                          <h4>Sunny segz</h4>
+                          <span>Chief Executive Officer</span>
+                          <div class="social">
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-              <div class="member">
-                <div class="pic">
-                  <img
-                    src="assets/img/ecopix/EcoStrong Investment Logo.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="details">
-                  <h4>Sarah Jhinson</h4>
-                  <span>Product Manager</span>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
+                <div class="swiper-slide">
+                  <div class="">
+                    <div class="card" style="width: 18rem">
+                      <img
+                        src="assets/img/teams/team2.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <div class="card-text">
+                          <h4>Sunny segz</h4>
+                          <span>Chief Executive Officer</span>
+                          <div class="social">
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-              <div class="member">
-                <div class="pic">
-                  <img
-                    src="assets/img/ecopix/EcoStrong Investment Logo.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="details">
-                  <h4>William Anderson</h4>
-                  <span>CTO</span>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
+                <div class="swiper-slide">
+                  <div class="">
+                    <div class="card" style="width: 18rem">
+                      <img
+                        src="assets/img/teams/team3.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <div class="card-text">
+                          <h4>Sunny segz</h4>
+                          <span>Chief Executive Officer</span>
+                          <div class="social">
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-              <div class="member">
-                <div class="pic">
-                  <img
-                    src="assets/img/ecopix/EcoStrong Investment Logo.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="details">
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
+                <div class="swiper-slide">
+                  <div class="">
+                    <div class="card" style="width: 18rem">
+                      <img
+                        src="assets/img/teams/team4.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <div class="card-text">
+                          <h4>Sunny segz</h4>
+                          <span>Chief Executive Officer</span>
+                          <div class="social">
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <div class="swiper-slide">
+                  <div class="">
+                    <div class="card" style="width: 18rem">
+                      <img
+                        src="assets/img/teams/team5.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <div class="card-text">
+                          <h4>Sunny segz</h4>
+                          <span>Chief Executive Officer</span>
+                          <div class="social">
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="">
+                    <div class="card" style="width: 18rem">
+                      <img
+                        src="assets/img/teams/team6.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <div class="card-text">
+                          <h4>Sunny segz</h4>
+                          <span>Chief Executive Officer</span>
+                          <div class="social">
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class=" ">
+                    <div class="card" style="width: 18rem">
+                      <img
+                        src="assets/img/teams/team7.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <div class="card-text">
+                          <h4>Sunny segz</h4>
+                          <span>Chief Executive Officer</span>
+                          <div class="social">
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="">
+                    <div class="card" style="width: 18rem">
+                      <img
+                        src="assets/img/teams/team8.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <div class="card-text">
+                          <h4>Sunny segz</h4>
+                          <span>Chief Executive Officer</span>
+                          <div class="social">
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class=" ">
+                    <div class="card" style="width: 18rem">
+                      <img
+                        src="assets/img/teams/team9.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <div class="card-text">
+                          <h4>Sunny segz</h4>
+                          <span>Chief Executive Officer</span>
+                          <div class="social">
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class=" ">
+                    <div class="card" style="width: 18rem">
+                      <img
+                        src="assets/img/teams/team10.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <div class="card-text">
+                          <h4>Sunny segz</h4>
+                          <span>Chief Executive Officer</span>
+                          <div class="social">
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                ...
               </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
@@ -978,6 +1142,7 @@
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/vendor/wow/wow.min.js"></script>

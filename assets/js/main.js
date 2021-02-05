@@ -187,31 +187,13 @@
     loop: true,
     responsive: {
       0: {
-        items: 1,
-      },
-      768: {
         items: 2,
       },
-      900: {
+      768: {
         items: 3,
       },
-    },
-  });
-
-  // Clients carousel (uses the Owl Carousel library)
-  $(".clients-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    responsive: {
-      0: {
-        items: 2,
-      },
-      768: {
-        items: 4,
-      },
       900: {
-        items: 6,
+        items: 4,
       },
     },
   });
@@ -254,11 +236,28 @@
   AOS.init();
 })(jQuery);
 
-var myVideo = document.getElementById("video1");
-
-function playPause() {
-  if (myVideo.paused) myVideo.play();
-  else myVideo.pause();
-}
-
-
+const swiper = new Swiper(".swiper-container", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  watchSlidesProgress: true,
+  watchSlidesVisibility: true,
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      // spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 2,
+      // spaceBetween: 10,
+    },
+    1024: {
+      slidesPerView: 4,
+      // spaceBetween: 10,
+    },
+  },
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
