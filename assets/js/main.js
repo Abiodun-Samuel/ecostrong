@@ -1,9 +1,4 @@
-/**
- * Template Name: Reveal - v2.2.0
- * Template URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
+
 !(function ($) {
   "use strict";
 
@@ -181,22 +176,7 @@
   });
 
   // Testimonials carousel (uses the Owl Carousel library)
-  $(".testimonials-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    responsive: {
-      0: {
-        items: 2,
-      },
-      768: {
-        items: 3,
-      },
-      900: {
-        items: 4,
-      },
-    },
-  });
+ 
 
   // Initiate venobox (lightbox feature used in portofilo)
   $(document).ready(function () {
@@ -234,30 +214,30 @@
   });
 
   AOS.init();
+  $(function () {
+    FastClick.attach(document.body);
+  });
 })(jQuery);
 
-const swiper = new Swiper(".swiper-container", {
-  // Optional parameters
-  direction: "horizontal",
+$("#our-team").owlCarousel({
   loop: true,
-  watchSlidesProgress: true,
-  watchSlidesVisibility: true,
-  breakpoints: {
-    640: {
-      slidesPerView: 2,
-      // spaceBetween: 10,
+  autoplayHoverPause: true,
+  center: true,
+  items: 3,
+  margin: 0,
+  autoplay: true,
+  dots: true,
+  autoplayTimeout: 2000,
+  smartSpeed: 450,
+  responsive: {
+    0: {
+      items: 2,
     },
     768: {
-      slidesPerView: 2,
-      // spaceBetween: 10,
+      items: 3,
     },
-    1024: {
-      slidesPerView: 4,
-      // spaceBetween: 10,
+    1170: {
+      items: 4,
     },
-  },
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
   },
 });
