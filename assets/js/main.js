@@ -1,7 +1,6 @@
-
 !(function ($) {
   "use strict";
-
+  $(".icon-box").matchHeight();
   // Back to top button
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
@@ -176,7 +175,6 @@
   });
 
   // Testimonials carousel (uses the Owl Carousel library)
- 
 
   // Initiate venobox (lightbox feature used in portofilo)
   $(document).ready(function () {
@@ -214,6 +212,7 @@
   });
 
   AOS.init();
+
   $(function () {
     FastClick.attach(document.body);
   });
@@ -225,7 +224,7 @@ $("#our-team").owlCarousel({
   center: true,
   items: 3,
   margin: 0,
-  autoplay: true,
+  autoplay: false,
   dots: true,
   autoplayTimeout: 2000,
   smartSpeed: 450,

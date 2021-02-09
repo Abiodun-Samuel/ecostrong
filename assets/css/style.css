@@ -77,7 +77,34 @@ section {
   color: #212121;
   font-weight: 500;
 }
-
+.mybtn-1 {
+  padding: 5px 8px;
+  color: #805229;
+  background: #f5f5f5;
+  outline: none;
+  border: 2px solid #805229;
+  margin: 10px;
+  font-size: 0.8125rem;
+}
+.mybtn-1:hover {
+  color: #f5f5f5;
+  background: #805229;
+  transition: 500ms;
+}
+.mybtn-2 {
+  padding: 5px 8px;
+  background-color: #805229;
+  color: #f5f5f5;
+  outline: none;
+  border: 2px solid #805229;
+  margin: 10px;
+  font-size: 0.8125rem;
+}
+.mybtn-2:hover {
+  color: #805229;
+  background: #f5f5f5;
+  transition: 500ms;
+}
 /*--------------------------------------------------------------
 # Top Bar
 --------------------------------------------------------------*/
@@ -527,17 +554,21 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /* ========== Service Section ========== */
+#services {
+  background-color: #f5f5f5;
+}
 #services .icon-box {
   text-align: center;
-  padding: 70px 20px 80px 20px;
+  padding: 1.5rem;
+  position: relative;
+  border-radius: 5px;
   transition: all ease-in-out 0.3s;
   background: #ffffff;
+  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
 }
 
 #services .icon-box .icon {
   margin: 0 auto;
-  width: 100px;
-  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -545,27 +576,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: relative;
 }
 
-#services .icon-box .icon i {
-  font-size: 36px;
-  transition: 0.5s;
+#services .icon-box .icon img {
   position: relative;
-}
-
-#services .icon-box .icon svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#services .icon-box .icon svg path {
-  transition: 0.5s;
-  fill: #f5f5f5;
+  max-width: 40%;
 }
 
 #services .icon-box h4 {
   font-weight: 600;
   margin: 10px 0 15px 0;
   font-size: 22px;
+  text-transform: uppercase;
 }
 
 #services .icon-box h4 a {
@@ -580,84 +600,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #services .icon-box:hover {
-  border-color: #fff;
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
-}
-
-#services .iconbox-blue i {
-  color: #47aeff;
-}
-
-#services .iconbox-blue:hover .icon i {
-  color: #fff;
-}
-
-#services .iconbox-blue:hover .icon path {
-  fill: #47aeff;
-}
-
-#services .iconbox-orange i {
-  color: #ffa76e;
-}
-
-#services .iconbox-orange:hover .icon i {
-  color: #fff;
-}
-
-#services .iconbox-orange:hover .icon path {
-  fill: #ffa76e;
-}
-
-#services .iconbox-pink i {
-  color: #e80368;
-}
-
-#services .iconbox-pink:hover .icon i {
-  color: #fff;
-}
-
-#services .iconbox-pink:hover .icon path {
-  fill: #e80368;
-}
-
-#services .iconbox-yellow i {
-  color: #ffbb2c;
-}
-
-#services .iconbox-yellow:hover .icon i {
-  color: #fff;
-}
-
-#services .iconbox-yellow:hover .icon path {
-  fill: #ffbb2c;
-}
-
-#services .iconbox-red i {
-  color: #ff5828;
-}
-
-#services .iconbox-red:hover .icon i {
-  color: #fff;
-}
-
-#services .iconbox-red:hover .icon path {
-  fill: #ff5828;
-}
-
-#services .iconbox-teal i {
-  color: #11dbcf;
-}
-
-#services .iconbox-teal:hover .icon i {
-  color: #fff;
-}
-
-#services .iconbox-teal:hover .icon path {
-  fill: #11dbcf;
+  color: #805229;
 }
 
 /* ========== Service Section ========== */
-
 
 /* Our Portfolio Section
 --------------------------------*/
@@ -852,7 +799,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Call To Action Section
 --------------------------------*/
 #call-to-action {
-  background: #081e5b;
+  background: #212121;
   background-size: cover;
   padding: 40px 0;
 }
