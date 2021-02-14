@@ -1,6 +1,9 @@
 !(function ($) {
   "use strict";
+
+  // make box with same height
   $(".icon-box").matchHeight();
+
   // Back to top button
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
@@ -19,24 +22,6 @@
     );
     return false;
   });
-
-  // Stick the header at top on scroll
-  $("#header").sticky({
-    topSpacing: 0,
-    zIndex: "50",
-  });
-
-  // Intro background carousel
-  $("#intro-carousel").owlCarousel({
-    autoplay: true,
-    dots: false,
-    loop: true,
-    animateOut: "fadeOut",
-    items: 1,
-  });
-
-  // Initiate the wowjs animation library
-  new WOW().init();
 
   // Initiate superfish on nav menu
   $(".nav-menu").superfish({
@@ -174,69 +159,32 @@
     });
   });
 
-  // Testimonials carousel (uses the Owl Carousel library)
-
-  // Initiate venobox (lightbox feature used in portofilo)
-  $(document).ready(function () {
-    $(".venobox").venobox();
-  });
-
-  // Porfolio isotope and filter
-  $(window).on("load", function () {
-    var portfolioIsotope = $(".portfolio-container").isotope({
-      itemSelector: ".portfolio-item",
-      layoutMode: "fitRows",
-    });
-
-    $("#portfolio-flters li").on("click", function () {
-      $("#portfolio-flters li").removeClass("filter-active");
-      $(this).addClass("filter-active");
-
-      portfolioIsotope.isotope({
-        filter: $(this).data("filter"),
-      });
-    });
-
-    // Initiate venobox (lightbox feature used in portofilo)
-    $(document).ready(function () {
-      $(".venobox").venobox();
-    });
-  });
-
-  // Portfolio details carousel
-  $(".portfolio-details-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    items: 1,
-  });
 
   AOS.init();
 
   $(function () {
     FastClick.attach(document.body);
   });
+  $("#our-team").owlCarousel({
+    loop: true,
+    autoplayHoverPause: true,
+    center: true,
+    items: 3,
+    margin: 0,
+    autoplay: false,
+    dots: true,
+    autoplayTimeout: 2000,
+    smartSpeed: 450,
+    responsive: {
+      0: {
+        items: 2,
+      },
+      768: {
+        items: 3,
+      },
+      1170: {
+        items: 4,
+      },
+    },
+  });
 })(jQuery);
-
-$("#our-team").owlCarousel({
-  loop: true,
-  autoplayHoverPause: true,
-  center: true,
-  items: 3,
-  margin: 0,
-  autoplay: false,
-  dots: true,
-  autoplayTimeout: 2000,
-  smartSpeed: 450,
-  responsive: {
-    0: {
-      items: 2,
-    },
-    768: {
-      items: 3,
-    },
-    1170: {
-      items: 4,
-    },
-  },
-});
