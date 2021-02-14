@@ -159,7 +159,6 @@
     });
   });
 
-
   AOS.init();
 
   $(function () {
@@ -167,7 +166,7 @@
   });
   $("#our-team").owlCarousel({
     loop: true,
-    autoplayHoverPause: true,
+    autoplayHoverPause: false,
     center: true,
     items: 3,
     margin: 0,
